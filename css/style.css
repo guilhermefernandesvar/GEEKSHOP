@@ -9,28 +9,32 @@
 
 body{
     min-height: 100vh;
-    background-color: rgb(77, 73, 73);
+    background-size: 100%;
 }
+
+.dark-mode{
+    background-image: url(imgs/Sistema/Background.jpg);
+     
+}
+  .light-mode {
+    background-image: url(imgs/Sistema/OIP.jfif);
+  }
 
 header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background: #ffffff;
+    background: #000000;
     box-shadow: 0 5px 10px rgba(0,0,0,.1);
     padding: 0px 7%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
+    opacity: 0.9;
 }
 
-header .logo{
-    font-weight: bolder;
-    font-size: 25px;
-    color: #333;
-}
 
 header .navbar ul {
     list-style: none;
@@ -44,20 +48,16 @@ header .navbar ul li{
 header .navbar ul li a{
     font-size: 20px;
     padding: 20px;
-    color: #333;
+    color: #fff;
     display: block;
 }
 
-header .navbar ul li a:hover{
-    background: #333;
-    color: #fff;
-}
 
 header .navbar ul li ul{
     position: absolute;
     left: 0;
     width: 200px;
-    background: #fff;
+    background: #000000;
     display: none;
 }
 
