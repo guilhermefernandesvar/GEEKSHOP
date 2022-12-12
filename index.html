@@ -8,10 +8,9 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="./imgs/icon.png">
 </head>
-<body>
+<body background="imgs/Sistema/Background.jpg">
+    
     <header>
-        <a href="#" class="logo">Logo</a>
-
         <input type="checkbox" id="menu-bar">
         <label for="menu-bar" >Menu</label>
 
@@ -58,40 +57,28 @@
                     </ul>
                     </li>
                 <li><a href="#">Contato</a></li>
+                <li><a href=""> Tema</a>
+                    <ul><li><button id="idh1" onclick="darkMode()">Escuro</button></li>
+                    <li><button id="idh3" onclick="lightMode()">Claro</button></li></ul>
+                </li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section>
-        <div class="container">
-            <div class="left-side">
-                <div class="itens">
-                    <div class="select-image">
-                        <img src="imgs/tennis-luffy/luffy-default1-grande.jpg" alt="">
-                    </div>
-                    <div class="thumbnails">
-                        <div class="thumbnail">
-                            <img src="imgs/tennis-luffy/luffy-default1.jpg" alt="">
-                        </div>
-                        <div class="thumbnail">
-                            <img src="imgs/tennis-luffy/luffy-default2.jpg" alt="">
-                        </div>
-                        <div class="thumbnail">
-                            <img src="imgs/tennis-luffy/luffy-default3.jpg" alt="">
-                        </div>
-                        <div class="thumbnail">
-                            <img src="imgs/tennis-luffy/luffy-default4.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <script>
+        function darkMode() {
+          var element = document.body;
+          var content = document.getElementById("DarkModetext");
+          element.className = "dark-mode";
+          hide
 
-            <div class="right-side">
-                <h1>TESTE</h1>
-            </div>
-        </div>
-        </section>
-    </main>
+        }
+        function lightMode() {
+          var element = document.body;
+          var content = document.getElementById("DarkModetext");
+          element.className = "light-mode";
+          hide
+        }
+      </script>
 </body>
 </html>
