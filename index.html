@@ -6,18 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GeekShop</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="icon" href="./imgs/icon.png">
+    <link rel="icon" href="imgs/Sistema/icon.png">
+    
 </head>
 <body background="imgs/Sistema/Background.jpg">
     
-    <header>
+    <header id="header">
         <input type="checkbox" id="menu-bar">
         <label for="menu-bar" >Menu</label>
 
         <nav class="navbar">
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Roupas </a>
+            <ul id="navtext">
+                <a href="#"><li><h2>Roupas</h2> </a>
                 <ul>
                     <li><a href="#">Moletons</a></li>
                     <li><a href="#">Camisetas</a></li>
@@ -32,7 +32,7 @@
                     <li><a href="#">Meias</a></li>
                 </ul>
                 </li>
-                <li><a href="#">Acessórios</a>
+                <li><a href="#"><h2>Acessórios</h2></a>
                 <ul>
                     <li><a href="#">Pulceiras</a></li>
                     <li><a href="#">Bonés</a></li>
@@ -42,7 +42,7 @@
                     <li><a href="#">Bolsa</a></li>
                 </ul>
                 </li>
-                <li><a href="#">Calçados </a>
+                <li><a href="#"><h2>Calçados</h2> </a>
                     <ul>
                         <li><a href="#">Tennis</a></li>
                         <li><a href="#">Sapatenis</a></li>
@@ -56,8 +56,8 @@
                         </li>
                     </ul>
                     </li>
-                <li><a href="#">Contato</a></li>
-                <li><a href=""> Tema</a>
+                <li><a href="#"><h2>Contato</h2></a></li>
+                <li><a href=""><h2>Tema</h2></a>
                     <ul><li><button id="idh1" onclick="darkMode()">Escuro</button></li>
                     <li><button id="idh3" onclick="lightMode()">Claro</button></li></ul>
                 </li>
@@ -65,19 +65,86 @@
         </nav>
     </header>
 
+
+    <div class="conteudo" id="cont">
+        <br><br>
+    <h1 style="padding-top: 15px;" id="h1">Produtos Favoritos</h1><br><br>
+        <div class="categorias">
+        <a href=""><img src="imgs/Sistema/exemplotennis.png" id="img1" class="example" alt="Tennis"></a>
+        <a href=""><img src="imgs/Sistema/exemploblusa.png" id="img2" class="example" alt="Blusa"></a>
+            <a href=""><img src="imgs/Sistema/exemplorelogio.png" id="img3" class="example" alt="Relogio"></a>
+            <a href=""><img src="imgs/Sistema/exemploboné.png" id="img4" class="example" alt="Boné"></a>
+            <a href=""><img src="imgs/Sistema/exemplomochila.png" id="img5" class="example" alt="Momochila"></a>
+            <a href=""><img src="imgs/Sistema/exemplocaneca.png" id="img6" class="example" alt="Caneca"></a>
+        </div><br>
+        <div class="textimg" >
+            <h1 id="textimg1" style="padding-right: 70px;">Tennis</h1>
+            <h1 id="textimg2" style="padding-right: 55px;">Moletons</h1>
+            <h1 id="textimg3" style="padding-right: 75px;">Relogios</h1>
+            <h1 id="textimg4" style="padding-right: 75px;">Bonés</h1>
+            <h1 id="textimg5" style="padding-right: 55px;">Mochilas</h1>
+            <h1 id="textimg6" style="padding-right: 90px;">Canecas</h1><br><br><br><br><br>
+        </div>
+        
+    </div>
+
+
+
+
+
     <script>
         function darkMode() {
+            //Referenciar tags
           var element = document.body;
           var content = document.getElementById("DarkModetext");
           element.className = "dark-mode";
-          hide
+          var navtext = document.getElementById('navtext')
+          var header = document.getElementById('header')
+
+            //Mudar classes
+          navtext.className = 'navtextblack';
+          header.className = 'headerblack'
 
         }
         function lightMode() {
+            //Referenciar tags
           var element = document.body;
           var content = document.getElementById("DarkModetext");
+          var navtext = document.getElementById('navtext');
+          var header = document.getElementById('header');
+          var h1 = document.getElementById('h1');
+          var textimg1 = document.getElementById('textimg1');
+          var textimg2 = document.getElementById('textimg2');
+          var textimg3 = document.getElementById('textimg3');
+          var textimg4 = document.getElementById('textimg4');
+          var textimg5 = document.getElementById('textimg5');
+          var textimg6 = document.getElementById('textimg6');
+          var img1 = document.getElementById('img1');
+          var img2 = document.getElementById('img2');
+          var img3 = document.getElementById('img3');
+          var img4 = document.getElementById('img4');
+          var img5 = document.getElementById('img5');
+          var img6 = document.getElementById('img6');
+
+            //Mudar classes
           element.className = "light-mode";
-          hide
+          navtext.className = 'navtext';
+          header.className = 'header';
+          h1.className = 'h1';
+          textimg1.className = 'textimg1';
+          textimg2.className = 'textimg1';
+          textimg3.className = 'textimg1';
+          textimg4.className = 'textimg1';
+          textimg5.className = 'textimg1';
+          textimg6.className = 'textimg1';
+          cont.className = 'cont'
+          img1.className = 'imgs'
+          img2.className = 'imgs'
+          img3.className = 'imgs'
+          img4.className = 'imgs'
+          img5.className = 'imgs'
+          img6.className = 'imgs'
+
         }
       </script>
 </body>
