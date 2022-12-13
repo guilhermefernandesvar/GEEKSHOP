@@ -1,24 +1,63 @@
-*{
+
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font: Arial, helvetica, sans-serif;
     text-transform: capitalize;
-    text-decoration: none;    
+    text-decoration: none;
 }
 
-body{
+body {
     min-height: 100vh;
-    background-size: 100%;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.dark-mode{
+.dark-mode {
     background-image: url(imgs/Sistema/Background.jpg);
-     
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-  .light-mode {
+
+.light-mode {
     background-image: url(imgs/Sistema/OIP.jfif);
-  }
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navtext {
+    font-size: 20px;
+    color: #000000;
+    display: block;
+    text-decoration: none;
+}
+
+.header{
+    background-color: #ffff;
+}
+
+.navtext h2{
+    color: #000;
+}
+
+.navtextblack {
+    font-size: 20px;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+}
+
+.headerblack {
+    background-color: #000;
+}
+
+.navtextblack h2{
+    color: #fff;
+}
 
 header {
     position: fixed;
@@ -26,7 +65,7 @@ header {
     left: 0;
     right: 0;
     background: #000000;
-    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
     padding: 0px 7%;
     display: flex;
     align-items: center;
@@ -40,12 +79,12 @@ header .navbar ul {
     list-style: none;
 }
 
-header .navbar ul li{
+header .navbar ul li {
     position: relative;
     float: left;
 }
 
-header .navbar ul li a{
+header .navbar ul li a {
     font-size: 20px;
     padding: 20px;
     color: #fff;
@@ -53,7 +92,7 @@ header .navbar ul li a{
 }
 
 
-header .navbar ul li ul{
+header .navbar ul li ul {
     position: absolute;
     left: 0;
     width: 200px;
@@ -61,22 +100,22 @@ header .navbar ul li ul{
     display: none;
 }
 
-header .navbar ul li ul li{
+header .navbar ul li ul li {
     width: 100%;
-    border-top: 1px solid rgb(0,0,0,.1);
+    border-top: 1px solid rgb(0, 0, 0, .1);
 }
 
-header .navbar ul li ul li ul{
+header .navbar ul li ul li ul {
     left: 200px;
     top: 0;
 }
 
-header .navbar ul li:focus-within > ul,
-header .navbar ul li:hover > ul {
+header .navbar ul li:focus-within>ul,
+header .navbar ul li:hover>ul {
     display: initial;
 }
 
-.container{
+.container {
     display: flex;
 }
 
@@ -84,27 +123,27 @@ header .navbar ul li:hover > ul {
     display: none;
 }
 
-header label{
+header label {
     font-size: 20px;
     color: #333;
     cursor: pointer;
     display: none;
 }
 
-.left-side{
+.left-side {
     display: flex;
     flex-direction: column;
 }
 
-.select-image{
+.select-image {
     max-width: 400px;
 }
 
-.select-image img{
+.select-image img {
     max-width: 100%;
 }
 
-.thumbnails{
+.thumbnails {
     display: flex;
     justify-content: space-evenly;
     max-width: 400px;
@@ -117,6 +156,65 @@ header label{
 }
 
 
+.conteudo{
+    background-color: #000;
+    margin-top: 80px;
+    text-align: left;
+    padding-left: 25px;
+    margin-left: 80px;
+    margin-right: 80px;
+    opacity: 0.93;
+}
+
+.categorias{
+    text-align: left;
+    padding-left: 80px;
+}
+
+.example{
+    width: 100px;
+    margin-right: 70px;
+    opacity: 1;
+    border: #fff 2px solid;
+    border-radius: 100%;
+}
+
+.textimg{
+    text-align: left;
+    margin-left: 85px;
+    padding-right: 70px;
+    display: flex;
+}
+
+.cont{
+    background-color: #fff;
+    margin-top: 80px;
+    text-align: left;
+    padding-left: 25px;
+    margin-left: 80px;
+    margin-right: 80px;
+    opacity: 0.93;
+}
+
+h1, a {
+    color: #fff;
+}
+
+.imgs{
+    width: 100px;
+    margin-right: 70px;
+    opacity: 1;
+    border: #000 2px solid;
+    border-radius: 100%;
+}
+
+.textimg1 {
+    color: #000;
+}
+
+.h1{
+    color: #000;
+}
 
 
 
@@ -125,45 +223,44 @@ header label{
 
 
 
-
-@media(max-width:991px){
-    header{
+@media(max-width:991px) {
+    header {
         padding: 20px;
     }
 
-    header label{
+    header label {
         display: initial;
     }
 
-    header .navbar{
+    header .navbar {
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
-        background: #fff;
-        border-top: 1px solid rgba(0,0,0,.1);
-        display: none ;
+        background: #000000;
+        border-top: 1px solid rgba(0, 0, 0, .1);
+        display: none;
     }
 
-    header .navbar ul li{
+    header .navbar ul li {
         width: 100%;
     }
 
-    header .navbar ul li ul{
+    header .navbar ul li ul {
         position: relative;
         width: 100%;
     }
 
-    header .navbar ul li ul li{
-        background: #eee;
+    header .navbar ul li ul li {
+        background: #000;
     }
 
-    header .navbar ul li ul li ul{
+    header .navbar ul li ul li ul {
         width: 100%;
         left: 0;
     }
 
-    #menu-bar:checked ~ .navbar {
+    #menu-bar:checked~.navbar {
         display: initial;
     }
 
