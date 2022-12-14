@@ -5,9 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GeekShop</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="imgs/Sistema/icon.png">
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        
+
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body background="imgs/Sistema/Background.jpg">
     
@@ -83,14 +91,108 @@
             <h1 id="textimg3" style="padding-right: 75px;">Relogios</h1>
             <h1 id="textimg4" style="padding-right: 75px;">Bonés</h1>
             <h1 id="textimg5" style="padding-right: 55px;">Mochilas</h1>
-            <h1 id="textimg6" style="padding-right: 90px;">Canecas</h1><br><br><br><br><br>
+            <h1 id="textimg6" style="padding-right: 90px;">Canecas</h1>
         </div>
-        
+
+        <h1 style="float: left;">Camisetas e camisas:</h1>
+
+        <div class="container" style="margin-left: 200px;">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="carousel slide multi-item-carousel" id="theCarousel">
+                  <div class="carousel-inner">
+                    <div class="item active">
+                      <div class="col-xs-4"><a href="#1"><img src="imgs/teste carroseu/itach1.jpg" class="img-responsive"></a></div>
+                    </div>
+                    <div class="item">
+                      <div class="col-xs-4"><a href="#1"><img src="imgs/teste carroseu/todoroki.jpg" class="img-responsive"></a></div>
+                    </div>
+                    <div class="item">
+                      <div class="col-xs-4"><a href="#1"><img src="imgs/teste carroseu/sailormoon.jpg" class="img-responsive"></a></div>
+                    </div>
+  
+                    <div class="item">
+                      <div class="col-xs-4"><a href="#1"><img src="imgs/teste carroseu/otaoku.jpg" class="img-responsive"></a></div>
+                    </div>
+                    <div class="item">
+                      <div class="col-xs-4"><a href="#1"><img src="imgs/teste carroseu/kaneki.png" class="img-responsive"></a></div>
+                    </div>      
+                    <div class="item">
+                      <div class="col-xs-4"><a href="#1"><img src="imgs/teste carroseu/sasuke.png" class="img-responsive"></a></div>
+                    </div>      
+          
+                  </div>
+                  <a class="left carousel-control" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+                  <a class="right carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
     </div>
 
-
-
-
+ 
+        <style media="screen">
+          .multi-item-carousel .carousel-inner > .item {
+          transition: 500ms ease-in-out left;
+        }
+        .multi-item-carousel .carousel-inner .active.left {
+          left: -33%;
+        }
+        .multi-item-carousel .carousel-inner .active.right {
+          left: 33%;
+        }
+        .multi-item-carousel .carousel-inner .next {
+          left: 33%;
+        }
+        .multi-item-carousel .carousel-inner .prev {
+          left: -33%;
+        }
+        @media all and (transform-3d), (-webkit-transform-3d) {
+          .multi-item-carousel .carousel-inner > .item {
+            transition: 500ms ease-in-out left;
+            transition: 500ms ease-in-out all;
+            -webkit-backface-visibility: visible;
+                    backface-visibility: visible;
+            -webkit-transform: none!important;
+                    transform: none!important;
+          }
+        }
+        .multi-item-carousel .carouse-control.left,
+        .multi-item-carousel .carouse-control.right {
+          background-image: none;
+        }
+        h1 {
+          color: white;
+          font-size: 2.25em;
+          text-align: center;
+          margin-top: 1em;
+          margin-bottom: 2em;
+          text-shadow: 0px 2px 0px #000000;
+        }
+        
+        </style>
+        <script type="text/javascript">
+          // Instantiate the Bootstrap carousel
+        $('.multi-item-carousel').carousel({
+          interval: false
+        });
+        
+        // for every slide in carousel, copy the next slide's item in the slide.
+        // Do the same for the next, next item.
+        $('.multi-item-carousel .item').each(function(){
+          var next = $(this).next();
+          if (!next.length) {
+            next = $(this).siblings(':first');
+          }
+          next.children(':first-child').clone().appendTo($(this));
+        
+          if (next.next().length>0) {
+            next.next().children(':first-child').clone().appendTo($(this));
+          } else {
+              $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+          }
+        });
+        </script>
 
     <script>
         function darkMode() {
@@ -100,10 +202,40 @@
           element.className = "dark-mode";
           var navtext = document.getElementById('navtext')
           var header = document.getElementById('header')
+          var h1 = document.getElementById('h1');
+          var h1a = document.getElementById('h1a');
+          var textimg1 = document.getElementById('textimg1');
+          var textimg2 = document.getElementById('textimg2');
+          var textimg3 = document.getElementById('textimg3');
+          var textimg4 = document.getElementById('textimg4');
+          var textimg5 = document.getElementById('textimg5');
+          var textimg6 = document.getElementById('textimg6');
+          var img1 = document.getElementById('img1');
+          var img2 = document.getElementById('img2');
+          var img3 = document.getElementById('img3');
+          var img4 = document.getElementById('img4');
+          var img5 = document.getElementById('img5');
+          var img6 = document.getElementById('img6');
 
             //Mudar classes
           navtext.className = 'navtextblack';
-          header.className = 'headerblack'
+          header.className = 'headerblack';
+          cont.className = 'contb';
+          h1.className = 'h1b';
+          h1a.className = 'h1b';
+          textimg1.className = 'textimg1b';
+          textimg2.className = 'textimg1b';
+          textimg3.className = 'textimg1b';
+          textimg4.className = 'textimg1b';
+          textimg5.className = 'textimg1b';
+          textimg6.className = 'textimg1b';
+          cont.className = 'contb';
+          img1.className = 'imgsb';
+          img2.className = 'imgsb';
+          img3.className = 'imgsb';
+          img4.className = 'imgsb';
+          img5.className = 'imgsb';
+          img6.className = 'imgsb';
 
         }
         function lightMode() {
