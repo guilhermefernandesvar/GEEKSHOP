@@ -6,34 +6,29 @@
     box-sizing: border-box;
     font: Arial, helvetica, sans-serif;
     text-transform: capitalize;
-    text-decoration: none;
 }
 
 body {
     min-height: 100vh;
     background-size: 80%;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
 }
 
 .dark-mode {
     background-image: url(imgs/Sistema/Background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
 }
 
 .light-mode {
-    background-image: url(imgs/Sistema/OIP.jfif);
+    background-image: url(imgs/Sistema/221242-manga-monochrome-One-Punch_Man-Saitama-748x408.jpg);
     background-size: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .navtext {
     font-size: 20px;
     color: #000000;
     display: block;
-    text-decoration: none;
+
 }
 
 .header{
@@ -130,31 +125,6 @@ header label {
     display: none;
 }
 
-.left-side {
-    display: flex;
-    flex-direction: column;
-}
-
-.select-image {
-    max-width: 400px;
-}
-
-.select-image img {
-    max-width: 100%;
-}
-
-.thumbnails {
-    display: flex;
-    justify-content: space-evenly;
-    max-width: 400px;
-    gap: 05px;
-}
-
-.thumbnail img {
-    width: 100%;
-    border-radius: 10px;
-}
-
 
 .conteudo{
     background-color: #000;
@@ -193,13 +163,21 @@ header label {
     padding-left: 25px;
     margin-left: 80px;
     margin-right: 80px;
-    opacity: 0.93;
+    opacity: 0.8;
 }
 
 h1, a {
     color: #fff;
 }
 
+.example{
+    width: 100px;
+    margin-right: 70px;
+    opacity: 1;
+    border: #000 2px solid;
+    border-radius: 100%;
+    border: 2px #fff solid;
+}
 .imgs{
     width: 100px;
     margin-right: 70px;
@@ -215,6 +193,30 @@ h1, a {
 .h1{
     color: #000;
 }
+
+
+.imgscamisetas{
+    height: 280px;
+    border-radius: 25px;
+    margin-right: 80px;
+}
+
+.camisas {
+    padding-left: 20px;
+}
+
+.textocamisas{
+    display: flex;
+}
+
+.textocamiswt{
+ color: #000;
+}
+
+.textocamisbl{
+ color: #fff;
+}
+
 
 
 
